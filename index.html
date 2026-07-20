@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>ProFix-Service UG - Ihr Umzugspartner in Bielefeld</title>
+    <!-- Externe Ressourcen -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Eigenes CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon (Logo im Browser-Tab) -->
+    <link rel="icon" type="image/png" href="ProFix-1.png">
+</head>
+<body>
+
+    <!-- ===== COOKIE BANNER ===== -->
+    <div id="cookieBanner" class="cookie-banner show">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <strong>🍪 Cookies & Datenschutz</strong>
+                <p>Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Mit der Nutzung unserer Website stimmen Sie unserer Cookie-Richtlinie zu.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button onclick="acceptCookies()" class="cookie-accept">Alle akzeptieren</button>
+                <button onclick="declineCookies()" class="cookie-decline">Nur notwendige</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/4952112345678?text=Hallo%20ProFix-Service%20UG,%20ich%20interessiere%20mich%20für%20Ihre%20Umzugsdienstleistungen" 
+       class="whatsapp-float" 
+       target="_blank"
+       title="WhatsApp Chat"
+       aria-label="WhatsApp Chat">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon">
+            <path fill="white" d="M16 0C7.164 0 0 7.164 0 16c0 2.823.744 5.481 2.044 7.794L.074 31.926l8.344-2.191A15.917 15.917 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.518 0-4.911-.697-6.945-1.908l-.498-.298-5.157 1.353 1.376-5.027-.327-.517A13.267 13.267 0 012.667 16c0-7.364 5.97-13.333 13.333-13.333S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.308-10.006c-.401-.201-2.37-1.17-2.738-1.303-.367-.134-.635-.201-.903.2-.268.402-1.036 1.304-1.27 1.571-.235.268-.469.301-.87.1-.401-.2-1.693-.624-3.225-1.989-1.192-1.063-1.997-2.375-2.231-2.776-.235-.402-.025-.619.176-.819.18-.18.401-.469.602-.703.2-.235.268-.402.401-.67.134-.268.067-.502-.033-.703-.1-.2-.903-2.177-1.237-2.98-.325-.781-.656-.675-.903-.687-.235-.012-.502-.015-.77-.015s-.703.1-1.07.502c-.368.401-1.405 1.371-1.405 3.345 0 1.973 1.438 3.88 1.638 4.147.201.268 2.823 4.312 6.841 6.047.955.413 1.701.659 2.282.843.96.305 1.834.262 2.525.159.77-.115 2.37-.969 2.704-1.905.335-.936.335-1.738.235-1.905-.1-.168-.368-.268-.77-.469z"/>
+        </svg>
+    </a>
+
+    <!-- ========================================
+         LANDING PAGE (STARTSEITE)
+         ======================================== -->
+    <div id="landingPage" class="landing-page">
+        <div class="particles"></div>
+        
+        <div class="logo-container">
+            <img src="ProFix-1.png" alt="ProFix-Service UG Logo" class="brand-logo-img">
+            <div class="tagline">Ihr zuverlässiger Partner für Umzüge</div>
+            <div class="location">📍 Bielefeld & Umgebung</div>
+        </div>
+
+        <div class="main-buttons">
+            <button class="service-button umzug-button" onclick="showPage('umzug')">
+                <div class="button-glow"></div>
+                <span class="service-icon">📦</span>
+                <div class="service-title">Umzugsservice</div>
+                <div class="service-description">
+                    Komplette Umzüge für Privat- und Geschäftskunden – von der Planung bis zum Einzug
+                </div>
+                <span class="arrow">→</span>
+            </button>
+
+            <button class="service-button other-button" onclick="showPage('other')">
+                <div class="button-glow"></div>
+                <span class="service-icon">🏠</span>
+                <div class="service-title">Weitere Services</div>
+                <div class="service-description">
+                    Gartenpflege, Entrümpelung, Malerarbeiten, Handwerkerservice & mehr
+                </div>
+                <span class="arrow">→</span>
+            </button>
+        </div>
+
+        <div class="features-banner">
+            <div class="feature">
+                <span class="feature-icon">⚡</span>
+                <span>Schnell</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">✓</span>
+                <span>Zuverlässig</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">💰</span>
+                <span>Fair</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">⭐</span>
+                <span>Professionell</span>
+            </div>
+        </div>
+
+        <div class="reviews-preview">
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Ausgezeichneter Service - über 50 zufriedene Kunden!"</p>
+        </div>
+
+        <div class="contact-info">
+            📞 <a href="tel:+4952112345678">0521 / 123 456 78</a>
+        </div>
+    </div>
+
+    <!-- ========================================
+         UMZUG SERVICE SEITE
+         ======================================== -->
+    <div id="umzugPage" class="service-page hidden">
+        <header class="main-header">
+            <nav>
+                <div class="nav-logo" onclick="showPage('home')">
+                    <img src="ProFix-1.png" alt="ProFix-Service UG" class="nav-logo-img">
+                </div>
+                <div class="nav-links">
+                    <a href="#" onclick="showSection('leistungen'); return false;">Leistungen</a>
+                    <a href="#" onclick="showSection('rechner'); return false;">Preisrechner</a>
+                    <a href="#" onclick="showSection('bewertungen'); return false;">Bewertungen</a>
+                    <a href="#" onclick="showSection('kontakt'); return false;">Kontakt</a>
+                </div>
+                <button class="back-button" onclick="showPage('home')">
+                    <span class="back-arrow">←</span> Zurück
+                </button>
+            </nav>
+        </header>
+
+        <div class="hero-small">
+            <div class="hero-content">
+                <h1>Professioneller Umzugsservice</h1>
+                <p>Von der Planung bis zum Einzug – wir kümmern uns um alles!</p>
+                <div class="hero-badges">
+                    <span class="badge">✓ Festpreisgarantie</span>
+                    <span class="badge">✓ Versichert</span>
+                    <span class="badge">✓ Erfahren</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <!-- ===== SLIDESHOW / DIASHOW ===== -->
+            <h2 class="section-title">
+                <span class="title-decoration">━━</span>
+                Unsere Arbeit in Bildern
+                <span class="title-decoration">━━</span>
+            </h2>
+
+            <div class="slideshow-container">
+                <div class="slideshow-wrapper" id="slideshowWrapper">
+                    <!-- Slide 1 -->
+                    <div class="slide active" data-index="0">
+                        <img src="bilder/umzug-1.jpeg" alt="Umzugsservice ProFix-Service">
+                        <div class="slide-caption">
+                            <h3>Professioneller Umzug</h3>
+                            <p>Wir transportieren Ihre Möbel sicher und sorgfältig</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="slide" data-index="1">
+                        <img src="bilder/umzug-2.jpeg" alt="Möbelmontage">
+                        <div class="slide-caption">
+                            <h3>Möbelmontage</h3>
+                            <p>Fachgerechter Aufbau Ihrer Möbel vor Ort</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="slide" data-index="2">
+                        <img src="bilder/umzug-3.jpeg" alt="Umzugsteam">
+                        <div class="slide-caption">
+                            <h3>Erfahrenes Team</h3>
+                            <p>Unser Team arbeitet schnell, sauber und zuverlässig</p>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="slide" data-index="3">
+                        <img src="bilder/umzug-4.jpeg" alt="Büroumzug">
+                        <div class="slide-caption">
+                            <h3>Büroumzüge</h3>
+                            <p>Minimale Ausfallzeiten für Ihr Unternehmen</p>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="slide" data-index="4">
+                        <img src="bilder/umzug-5.jpeg" alt="Wohnungsumzug">
+                        <div class="slide-caption">
+                            <h3>Wohnungsumzug</h3>
+                            <p>Sorgfältiger Umzug Ihrer gesamten Wohnung</p>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="slide" data-index="5">
+                        <img src="bilder/umzug-6.jpeg" alt="Küchenmontage">
+                        <div class="slide-caption">
+                            <h3>Küchenmontage</h3>
+                            <p>Professioneller Aufbau Ihrer neuen Küche</p>
+                        </div>
+                    </div>
+                    <!-- Slide 7 -->
+                    <div class="slide" data-index="6">
+                        <img src="bilder/umzug-7.jpeg" alt="Möbeltransport">
+                        <div class="slide-caption">
+                            <h3>Sicherer Transport</h3>
+                            <p>Ihre Möbel sind bei uns in guten Händen</p>
+                        </div>
+                    </div>
+                    <!-- Slide 8 -->
+                    <div class="slide" data-index="7">
+                        <img src="bilder/umzug-8.jpeg" alt="Verpackungsservice">
+                        <div class="slide-caption">
+                            <h3>Verpackungsservice</h3>
+                            <p>Professionelles Verpacken mit hochwertigem Material</p>
+                        </div>
+                    </div>
+                    <!-- Slide 9 -->
+                    <div class="slide" data-index="8">
+                        <img src="bilder/umzug-9.jpeg" alt="Firmenumzug">
+                        <div class="slide-caption">
+                            <h3>Firmenumzüge</h3>
+                            <p>Effiziente Umzüge für Ihr Unternehmen</p>
+                        </div>
+                    </div>
+                    <!-- Slide 10 -->
+                    <div class="slide" data-index="9">
+                        <img src="bilder/umzug-10.jpeg" alt="Einzug">
+                        <div class="slide-caption">
+                            <h3>Perfekter Einzug</h3>
+                            <p>Alles an seinem Platz – stressfrei und schnell</p>
+                        </div>
+                    </div>
+                    <!-- Slide 10 -->
+                <div class="slide" data-index="10">
+                    <img src="bilder/umzug-11.jpeg" alt="Küchenumzug">
+                    <div class="slide-caption">
+                        <h3>Küchenumzug</h3>
+                        <p>Fachgerechter Transport und Aufbau Ihrer Küche</p>
+                    </div>
+                </div>
+
+                <!-- Slide 11 -->
+                <div class="slide" data-index="11">
+                    <img src="bilder/umzug-12.jpeg" alt="Umzug mit Kind">
+                    <div class="slide-caption">
+                        <h3>Umzug mit Kindern</h3>
+                        <p>Wir kümmern uns um alles – damit Sie sich um Ihre Familie kümmern können</p>
+                    </div>
+                </div>
+
+                <!-- Slide 12 -->
+                <div class="slide" data-index="12">
+                    <img src="bilder/umzug-13.jpeg" alt="Möbel zerlegen">
+                    <div class="slide-caption">
+                        <h3>Möbel-Demontage</h3>
+                        <p>Wir zerlegen Ihre Möbel fachgerecht für den Transport</p>
+                    </div>
+                </div>
+
+                <!-- Slide 13 -->
+                <div class="slide" data-index="13">
+                    <img src="bilder/umzug-14.jpeg" alt="Möbel aufbauen">
+                    <div class="slide-caption">
+                        <h3>Möbel-Montage</h3>
+                        <p>Alles wird am neuen Ort wieder perfekt aufgebaut</p>
+                    </div>
+                </div>
+
+                <!-- Auskommentiert: Slide-Divs 14 bis 33 -->
+                <!--
+                <div class="slide" data-index="14">
+                    <img src="bilder/umzug-15.jpeg" alt="Sicher verpackt">
+                    <div class="slide-caption">
+                        <h3>Sicher verpackt</h3>
+                        <p>Empfindliche Gegenstände werden professionell eingepackt</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="15">
+                    <img src="bilder/umzug-16.jpeg" alt="Umzug mit LKW">
+                    <div class="slide-caption">
+                        <h3>Moderne LKW-Flotte</h3>
+                        <p>Unsere Fahrzeuge sind für jeden Umzug bestens ausgestattet</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="16">
+                    <img src="bilder/umzug-17.jpeg" alt="Umzug im Regen">
+                    <div class="slide-caption">
+                        <h3>Umzug bei jedem Wetter</h3>
+                        <p>Wir schützen Ihre Möbel vor Regen und Nässe</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="17">
+                    <img src="bilder/umzug-18.jpeg" alt="Unser Team">
+                    <div class="slide-caption">
+                        <h3>Unser erfahrenes Team</h3>
+                        <p>Freundlich, zuverlässig und immer für Sie da</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="18">
+                    <img src="bilder/umzug-19.jpeg" alt="Umzug nach oben">
+                    <div class="slide-caption">
+                        <h3>Umzug in höhere Stockwerke</h3>
+                        <p>Auch in obere Etagen bringen wir Ihre Möbel sicher</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="19">
+                    <img src="bilder/umzug-20.jpeg" alt="Einpackservice">
+                    <div class="slide-caption">
+                        <h3>Professioneller Einpackservice</h3>
+                        <p>Wir packen Ihre gesamte Wohnung in kürzester Zeit ein</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="20">
+                    <img src="bilder/umzug-21.jpeg" alt="Auspackservice">
+                    <div class="slide-caption">
+                        <h3>Auspackservice</h3>
+                        <p>Wir räumen Ihre Kartons aus und bringen alles an seinen Platz</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="21">
+                    <img src="bilder/umzug-22.jpeg" alt="Umzug mit Pflanzen">
+                    <div class="slide-caption">
+                        <h3>Pflanzentransport</h3>
+                        <p>Wir transportieren auch Ihre Pflanzen sicher und schonend</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="22">
+                    <img src="bilder/umzug-23.jpeg" alt="Klavier transportieren">
+                    <div class="slide-caption">
+                        <h3>Klavier-Transport</h3>
+                        <p>Spezialisten für empfindliche Instrumente</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="23">
+                    <img src="bilder/umzug-24.jpeg" alt="Büroausstattung">
+                    <div class="slide-caption">
+                        <h3>Büroausstattung transportieren</h3>
+                        <p>Wir kümmern uns um Ihre komplette Büroeinrichtung</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="24">
+                    <img src="bilder/umzug-25.jpeg" alt="Einlagerung">
+                    <div class="slide-caption">
+                        <h3>Einlagerungsservice</h3>
+                        <p>Zwischenlagerung Ihrer Möbel in unseren klimatisierten Räumen</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="25">
+                    <img src="bilder/umzug-26.jpeg" alt="Umzug am Wochenende">
+                    <div class="slide-caption">
+                        <h3>Umzug am Wochenende</h3>
+                        <p>Wir sind auch samstags für Sie im Einsatz</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="26">
+                    <img src="bilder/umzug-27.jpeg" alt="Möbeltransport mit Aufzug">
+                    <div class="slide-caption">
+                        <h3>Möbeltransport mit Aufzug</h3>
+                        <p>Effizienter Transport auch mit Aufzug</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="27">
+                    <img src="bilder/umzug-28.jpeg" alt="Umzug mit Paket">
+                    <div class="slide-caption">
+                        <h3>Faire Preise</h3>
+                        <p>Transparente Kosten – kein versteckter Aufpreis</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="28">
+                    <img src="bilder/umzug-29.jpeg" alt="Glücklicher Kunde">
+                    <div class="slide-caption">
+                        <h3>Glückliche Kunden</h3>
+                        <p>Ihre Zufriedenheit ist unser größter Lohn</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="29">
+                    <img src="bilder/umzug-30.jpeg" alt="Umzug mit Herz">
+                    <div class="slide-caption">
+                        <h3>Umzug mit Herz</h3>
+                        <p>Wir kümmern uns um Ihre Möbel, als wären es unsere eigenen</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="30">
+                    <img src="bilder/umzug-31.jpeg" alt="Nachhaltigkeit">
+                    <div class="slide-caption">
+                        <h3>Nachhaltiger Umzug</h3>
+                        <p>Wir achten auf umweltfreundliche Verpackungsmaterialien</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="31">
+                    <img src="bilder/umzug-32.jpeg" alt="Umzug mit Hund">
+                    <div class="slide-caption">
+                        <h3>Umzug mit Haustieren</h3>
+                        <p>Wir nehmen Rücksicht auf Ihre Lieblinge</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="32">
+                    <img src="bilder/umzug-33.jpeg" alt="Umzug nach Maß">
+                    <div class="slide-caption">
+                        <h3>Umzug nach Maß</h3>
+                        <p>Individuelle Lösungen für jeden Kunden</p>
+                    </div>
+                </div>
+
+                <div class="slide" data-index="33">
+                    <img src="bilder/umzug-34.jpeg" alt="Bester Service">
+                    <div class="slide-caption">
+                        <h3>Bester Service</h3>
+                        <p>Mehr als 50 zufriedene Kunden – werden Sie der nächste!</p>
+                    </div>
+                </div>
+                -->
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button class="slide-btn prev" onclick="changeSlide(-1)" aria-label="Vorheriges Bild">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slide-btn next" onclick="changeSlide(1)" aria-label="Nächstes Bild">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Counter -->
+                <div class="slide-counter" id="slideCounter">1 / 10</div>
+
+                <!-- Dots -->
+                <div class="slide-dots" id="slideDots"></div>
+            </div>
+
+            <!-- SO FUNKTIONIERT'S -->
+            <h2 class="section-title" id="leistungen">
+                <span class="title-decoration">━━</span>
+                So funktioniert's
+                <span class="title-decoration">━━</span>
+            </h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Beratung</h3>
+                        <p>Wir besprechen Ihren Umzug und erstellen ein individuelles Angebot</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Planung</h3>
+                        <p>Wir organisieren alle Details – von Verpackung bis Transport</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Durchführung</h3>
+                        <p>Professioneller Umzug mit eigenem Team und Fahrzeugen</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>Einzug</h3>
+                        <p>Wir bringen alles an den gewünschten Platz – fertig!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEISTUNGEN IM DETAIL -->
+            <h2 class="section-title">
+                <span class="title-decoration">━━</span>
+                Unsere Umzugsleistungen
+                <span class="title-decoration">━━</span>
+            </h2>
+
+            <div class="services-grid-modern">
+                <div class="service-card-modern moving">
+                    <div class="card-background"></div>
+                    <div class="service-card-icon">🏠</div>
+                    <h3>Privatumzüge</h3>
+                    <ul>
+                        <li>Kompletter Wohnungsumzug</li>
+                        <li>Hausumzüge jeder Größe</li>
+                        <li>Möbelmontage vor Ort</li>
+                        <li>Verpackungsservice</li>
+                        <li>Ein- und Auspackservice</li>
+                    </ul>
+                </div>
+
+                <div class="service-card-modern" style="border-top: 4px solid #3498db;">
+                    <div class="card-background" style="background: #3498db;"></div>
+                    <div class="service-card-icon">🏢</div>
+                    <h3>Geschäftsumzüge</h3>
+                    <ul>
+                        <li>Büroumzüge</li>
+                        <li>Firmenumzüge</li>
+                        <li>Minimale Ausfallzeiten</li>
+                        <li>IT-Equipment Transport</li>
+                        <li>Archiv- & Aktenumzüge</li>
+                    </ul>
+                </div>
+
+                <div class="service-card-modern cleaning">
+                    <div class="card-background"></div>
+                    <div class="service-card-icon">📦</div>
+                    <h3>Verpackungsservice</h3>
+                    <ul>
+                        <li>Hochwertiges Verpackungsmaterial</li>
+                        <li>Fachgerechtes Verpacken</li>
+                        <li>Kennzeichnung der Kartons</li>
+                        <li>Schutz empfindlicher Gegenstände</li>
+                        <li>Auspacken vor Ort</li>
+                    </ul>
+                </div>
+
+                <div class="service-card-modern handyman">
+                    <div class="card-background"></div>
+                    <div class="service-card-icon">🔧</div>
+                    <h3>Montage & Demontage</h3>
+                    <ul>
+                        <li>Möbel fachgerecht ab- und aufbauen</li>
+                        <li>Küchenmontage</li>
+                        <li>Schrankmontage</li>
+                        <li>Regalsysteme</li>
+                        <li>Einbau von Möbeln</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- PREISRECHNER -->
+            <div id="rechner" class="calculator-section">
+                <h3>💰 Kostenrechner</h3>
+                <p>Schätzen Sie schnell Ihre Umzugskosten</p>
+                
+                <div class="calculator-grid">
+                    <div class="calculator-item">
+                        <label>Raumanzahl (Zimmer)</label>
+                        <input type="number" id="rooms" value="2" min="1" max="20">
+                    </div>
+                    <div class="calculator-item">
+                        <label>Entfernung (km)</label>
+                        <input type="number" id="distance" value="20" min="1" max="500">
+                    </div>
+                    <div class="calculator-item">
+                        <label>Verpackungsservice</label>
+                        <input type="number" id="packaging" value="0" min="0" max="1" step="1">
+                        <span>(0=Nein, 1=Ja)</span>
+                    </div>
+                    <div class="calculator-item">
+                        <label>Montage & Demontage</label>
+                        <input type="number" id="assembly" value="0" min="0" max="1" step="1">
+                        <span>(0=Nein, 1=Ja)</span>
+                    </div>
+                </div>
+
+                <div class="calculator-total">
+                    <div class="total-label">Geschätzte Kosten</div>
+                    <div class="total-price" id="totalPrice">450 €</div>
+                    <div class="hint">*Unverbindliche Schätzung. Endgültiges Angebot nach Besichtigung.</div>
+                </div>
+            </div>
+
+            <!-- BEWERTUNGEN -->
+            <div id="bewertungen" class="reviews-section">
+                <h2 class="section-title">
+                    <span class="title-decoration">━━</span>
+                    Kundenbewertungen
+                    <span class="title-decoration">━━</span>
+                </h2>
+
+                <div class="overall-rating">
+                    <div class="rating-score">4.9</div>
+                    <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="rating-count">Basierend auf 52 Bewertungen</div>
+                </div>
+
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">M</div>
+                            <div>
+                                <h4>Michael S.</h4>
+                                <div class="review-stars-small">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Hervorragender Umzugsservice! Das Team war pünktlich und hat alles perfekt gemacht. Sehr professionell!"</p>
+                        <span class="review-date">vor 2 Wochen</span>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">S</div>
+                            <div>
+                                <h4>Sarah K.</h4>
+                                <div class="review-stars-small">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Komplettservice war sein Geld absolut wert. Von der Planung bis zum Einzug alles top. Sehr zu empfehlen!"</p>
+                        <span class="review-date">vor 1 Monat</span>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">T</div>
+                            <div>
+                                <h4>Thomas B.</h4>
+                                <div class="review-stars-small">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Schnell, zuverlässig und faire Preise. Habe bereits mehrere Umzüge mit ProFix-Service gemacht - immer zufrieden!"</p>
+                        <span class="review-date">vor 3 Wochen</span>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">A</div>
+                            <div>
+                                <h4>Anna L.</h4>
+                                <div class="review-stars-small">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Umzug mit Küchenmontage - perfekt! Sehr saubere Arbeit und nettes Team. Gerne wieder!"</p>
+                        <span class="review-date">vor 1 Woche</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KONTAKT -->
+            <div id="kontakt" class="contact-section">
+                <h2 class="section-title">
+                    <span class="title-decoration">━━</span>
+                    Kontakt aufnehmen
+                    <span class="title-decoration">━━</span>
+                </h2>
+
+                <div class="contact-container">
+                    <div class="contact-info-box">
+                        <h3>Kontaktinformationen</h3>
+                        <div class="info-item">
+                            <span class="info-icon">📞</span>
+                            <div>
+                                <strong>Telefon</strong>
+                                <a href="tel:+4952112345678">0521 / 123 456 78</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">✉️</span>
+                            <div>
+                                <strong>E-Mail</strong>
+                                <a href="mailto:info@profix-service.de">info@profix-service.de</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <strong>Standort</strong>
+                                <p>Bielefeld & Umgebung</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🕐</span>
+                            <div>
+                                <strong>Öffnungszeiten</strong>
+                                <p>Mo-Fr: 8:00 - 18:00 Uhr<br>Sa: 9:00 - 14:00 Uhr</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🏛️</span>
+                            <div>
+                                <strong>Rechtliche Angaben</strong>
+                                <p>ProFix-Service UG (haftungsbeschränkt)<br>HRB 12345, Amtsgericht Bielefeld<br>Geschäftsführer: [Name]</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm" onsubmit="submitContactForm(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-Mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Bitte wählen...</option>
+                                <option value="privatumzug">Privatumzug</option>
+                                <option value="geschaeftsumzug">Geschäftsumzug</option>
+                                <option value="verpackung">Verpackungsservice</option>
+                                <option value="montage">Montage & Demontage</option>
+                                <option value="other">Andere Dienstleistung</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Ihre Nachricht *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Bitte beschreiben Sie Ihren Umzug (Umzugsdatum, Größe, besondere Anforderungen...)" required></textarea>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">Ich habe die Datenschutzerklärung gelesen und stimme zu. *</label>
+                        </div>
+
+                        <button type="submit" class="form-submit">
+                            <span>Kostenloses Angebot anfordern</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         ANDERE SERVICES SEITE
+         ======================================== -->
+    <div id="otherPage" class="service-page hidden">
+        <header class="main-header">
+            <nav>
+                <div class="nav-logo" onclick="showPage('home')">
+                    <img src="ProFix-1.png" alt="ProFix-Service UG" class="nav-logo-img">
+                </div>
+                <button class="back-button" onclick="showPage('home')">
+                    <span class="back-arrow">←</span> Zurück
+                </button>
+            </nav>
+        </header>
+
+        <div class="hero-small">
+            <div class="hero-content">
+                <h1>Weitere Hausdienstleistungen</h1>
+                <p>Alles für Ihr Zuhause aus einer Hand</p>
+                <div class="hero-badges">
+                    <span class="badge">✓ Individuell</span>
+                    <span class="badge">✓ Komplett</span>
+                    <span class="badge">✓ Fair</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="title-decoration">━━</span>
+                Unser Leistungsspektrum
+                <span class="title-decoration">━━</span>
+            </h2>
+
+            <div class="services-grid-modern">
+                <div class="service-card-modern garden">
+                    <div class="card-background"></div>
+                    <div class="service-card-icon">🌳</div>
+                    <h3>Garten & Grünpflege</h3>
+                    <ul>
+                        <li>Rasenmähen</li>
+                        <li>Heckenschnitt</li>
+                        <li>Bepflanzung</li>
+                        <li>Laubentsorgung</li>
+                        <li>Gartenpflege</li>
+                    </ul>
+                </div>
+
+                <div class="service-card-modern cleaning">
+                    <div class="card-background"></div>
+                    <div class="service-card-icon">🗑️</div>
+                    <h3>Entrümpelung</h3>
+                    <ul>
+                        <li>Haushaltsauflösung</li>
+                        <li>Kellerentrümpelung</li>
+                        <li>Dachbodenentrümpelung</li>
+                        <li>Garageentrümpelung</li>
+                        <li>Fachgerechte Entsorgung</li>
+                    </ul>
+                </div>
+
+                <div class="service-card-modern painting">
+                    <div class="card-background"></div>
+                    <div class="service-card-icon">🎨</div>
+                    <h3>Malerarbeiten</h3>
+                    <ul>
+                        <li>Innenraumgestaltung</li>
+                        <li>Tapezieren</li>
+                        <li>Streichen</li>
+                        <li>Fassadenarbeiten</li>
+                        <li>Renovierungsarbeiten</li>
+                    </ul>
+                </div>
+
+                <div class="service-card-modern handyman">
+                    <div class="card-background"></div>
+                    <div class="service-card-icon">🔨</div>
+                    <h3>Handwerkerservice</h3>
+                    <ul>
+                        <li>Kleinreparaturen</li>
+                        <li>Möbelreparatur</li>
+                        <li>Regale aufhängen</li>
+                        <li>Lampen montieren</li>
+                        <li>Bilder aufhängen</li>
+                    </ul>
+                </div>
+
+                <div class="service-card-modern clean">
+                    <div class="card-background"></div>
+                    <div class="service-card-icon">🧹</div>
+                    <h3>Reinigungsservice</h3>
+                    <ul>
+                        <li>Endreinigung</li>
+                        <li>Grundreinigung</li>
+                        <li>Fensterreinigung</li>
+                        <li>Teppichreinigung</li>
+                        <li>Nach-Renovierungs-Reinigung</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="combo-offer">
+                <h3>💡 Individuelle Pakete möglich!</h3>
+                <p>Kombinieren Sie verschiedene Services und sparen Sie bis zu 20%!</p>
+                <button class="cta-button-modern" onclick="showPage('umzug'); setTimeout(() => document.getElementById('kontakt').scrollIntoView({behavior:'smooth'}), 500);">
+                    <span>Jetzt anfragen</span>
+                    <span class="button-shine"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="js/script.js"></script>
+</body>
+</html>
